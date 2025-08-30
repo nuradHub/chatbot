@@ -133,7 +133,7 @@ const Chats = ({ chatMessages, setChatMessages }) => {
 
         const updatedChatMessages = updatedChatMessagesRef.map((messageItem) =>
           messageItem.id === robotRef?.id
-            ? { ...messageItem, text: responseSnap, status: "done" }
+            ? { ...messageItem, text: responseSnap, status: "done", createdAt: new Date().getTime(), }
             : messageItem
         );
 
