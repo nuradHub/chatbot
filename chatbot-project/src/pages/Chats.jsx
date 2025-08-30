@@ -127,6 +127,8 @@ const Chats = ({ chatMessages, setChatMessages }) => {
           message: inputText,
         });
 
+        setInputText("");
+
         const responseSnap = response?.data?.response;
 
         const updatedChatMessages = updatedChatMessagesRef.map((messageItem) =>
@@ -145,7 +147,6 @@ const Chats = ({ chatMessages, setChatMessages }) => {
         console.log(error);
         toast.error(error.code?.split("/")[1]?.split("-")?.join(" "));
       }
-      setInputText("");
     }
   };
 
