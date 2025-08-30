@@ -39,7 +39,7 @@ export const Login = () => {
         <img src={chatbotImage2} alt="" />
         <h4>Welcome! Login</h4>
       </div>
-      <form className="form-field" onSubmit={HandleSubmit}>
+      <form className="form-field" autocomplete="on" onSubmit={HandleSubmit}>
         <input
           type="email"
           placeholder="Enter your email"
