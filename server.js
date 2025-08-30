@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve frontend dist folder
-const distPath = path.join(__dirname, "dist");
+const distPath = path.join(__dirname, "chatbot-project", "dist");
 app.use(express.static(distPath));
 
 // ── Model setup (LOCAL ONLY) ───────────────────────────────────────────
