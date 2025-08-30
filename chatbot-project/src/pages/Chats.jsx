@@ -120,14 +120,14 @@ const Chats = ({ chatMessages, setChatMessages }) => {
       );
 
       setChatMessages(updatedChatMessagesRef);
+      const inputCopy = inputText;
+      setInputText("");
 
       try {
         const response = await apiCall.post(`/chat`, {
           userId: userId,
-          message: inputText,
+          message: inputCopy,
         });
-
-        setInputText("");
 
         const responseSnap = response?.data?.response;
 
