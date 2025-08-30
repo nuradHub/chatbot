@@ -145,6 +145,7 @@ const Chats = ({ chatMessages, setChatMessages }) => {
         console.log(error);
         toast.error(error.code?.split("/")[1]?.split("-")?.join(" "));
       }
+      setInputText("");
     }
   };
 
