@@ -47,7 +47,7 @@ const SignUp = () => {
             <img src={chatbotImage2} alt="" />
             <h4>Welcome! Sign up</h4>
           </div>
-          <form className="form-field" onSubmit={HandleSubmit}>
+          <form className="form-field" autocomplete="on" onSubmit={HandleSubmit}>
             <input
               type="email"
               placeholder="Enter your email"
