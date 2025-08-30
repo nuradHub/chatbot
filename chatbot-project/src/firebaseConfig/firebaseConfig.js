@@ -83,35 +83,31 @@ export const HandleSignin = async (email, password)=> {
 }
 
 // ✅ Updated Google Signin with redirect fallback
-export const HandleGoogleSignin = async ()=> {
+export const HandleGoogleSignin = async () => {
   try {
-    let response;
-    if (window.innerWidth < 768) {
-      // Mobile devices → use redirect (popup is often blocked)
-      await signInWithRedirect(auth, googleProvider);
-      response = await getRedirectResult(auth);
-    } else {
-      // Desktop → use popup
-      response = await signInWithPopup(auth, googleProvider);
-    }
+    // Use popup for all devices
+    const response = await signInWithPopup(auth, googleProvider);
 
-    if (!response) return; // if redirect hasn’t returned yet
+    if (!response) return;
 
     const userSnap = response.user;
-    await setDoc(doc(db, 'users', userSnap.uid), {
+
+    await setDoc(doc(db, "users", userSnap.uid), {
       id: userSnap.uid,
       name: userSnap.displayName,
       email: userSnap.email,
       createdAt: new Date(),
-      bio: 'Hey there, am using NuraChat',
-      avater: userSnap.photoURL
-    })
+      bio: "Hey there, am using NuraChat",
+      avater: userSnap.photoURL,
+    });
+
     return userSnap;
-  }catch (error) {
+  } catch (error) {
     console.error(error);
     throw error;
   }
-}
+};
+
 
 export const HandleSignOut = async ()=> {
   try{
