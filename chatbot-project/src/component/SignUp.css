@@ -1,0 +1,287 @@
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(8, 14, 14);
+  height: 100dvh;
+  padding-bottom: 20px;
+  overflow: scroll;
+}
+.robot-image-container{
+  width: 300px;
+  padding-top: 40px;
+}
+.robot-image-container img{
+  width: 100%;
+}
+.signup-form{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 300px;
+  margin: auto;
+}
+.signup-form .signup img{
+  width: 30px;
+}
+.signup-header{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.signup-header img{
+  width: 40px;
+  display: none;
+}
+.signup-header h4{
+  color:  rgb(180, 178, 178);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.form-field{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-field input, .form-field button{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+.form-field input{
+ background-color: rgb(4, 10, 10);
+ color: rgb(180, 178, 178);
+ font-size: 17px;
+ padding: 15px 0;
+ width: 300px;
+}
+.input-eye-container{
+ display: flex;
+ align-items: center;
+ position: relative;
+ cursor: pointer;
+}
+.input-eye-container input{
+ display: flex;
+ width: 100%;
+}
+.input-eye-container span img{
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  width: 20px;
+}
+.form-field input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px rgb(3, 7, 7) inset; /* background color */
+  -webkit-text-fill-color: #f5f5f5; /* text color */
+  color: white;
+  background-color: rgb(39, 34, 112);
+  transition: background-color 5000s ease-in-out 0s; /* prevent flash */
+}
+.form-field input:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0 1000px rgb(3, 7, 7) inset; /* background color */
+  -webkit-text-fill-color: #f5f5f5; /* text color */
+  color: white;
+  background-color: rgb(39, 34, 112);
+  transition: background-color 5000s ease-in-out 0s; /* prevent flash */
+}
+
+.form-field .email-prompt{
+  background-image: url('../assets/gmail-icon.png');
+  background-size: 15px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+}
+.form-field .password-prompt{
+  background-image: url('../assets/password-icon.png');
+  background-size: 15px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-right: 50px;
+}
+
+.form-field input:focus{
+ outline: none;
+}
+.form-field input::placeholder{
+ color: rgb(126, 126, 126);
+}
+.form-field button{
+  font-size: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.form-field .signup{
+  background-color:rgb(9, 19, 19);
+  padding: 15px 10px;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-field p{
+  color: rgb(126, 126, 126);
+}
+.form-field p span{
+  color: rgb(100, 100, 245);
+  cursor: pointer;
+}
+.form-field .option-signup{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 17px;
+  color: rgb(126, 126, 126);
+}
+.option-signup::before, .option-signup::after{
+ content: "";
+ border: 1px solid rgb(126, 126, 126);
+ flex: 1;
+}
+.form-field .google{
+  background-color: rgb(9, 19, 19);
+  color: rgb(151, 151, 151);
+  background-image: url('../assets/google-icon.png');
+  background-size: 30px;
+  background-position: 20px;
+  background-repeat: no-repeat;
+  padding: 15px 10px;
+}
+.loading{
+  width: 40px;
+}
+
+
+/*media query*/
+
+@media screen and (min-width:765px) {
+  .signup-container{
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(8, 14, 14);
+  min-height: 100dvh;
+  padding-bottom: 0px;
+  overflow: scroll;
+  padding-right: 50px;
+}
+.robot-image-container{
+  width: 360px;
+  padding-top: 0px;
+}
+.robot-image-container img{
+  width: 100%;
+}
+.signup-form{
+  flex: 1;
+  max-width: 500px;
+  margin: 0%;
+  border: 1px solid rgb(12, 29, 29);
+  padding: 20px 20px;
+  box-shadow: 0 0 10px  rgb(12, 29, 29);
+}
+
+.signup-header{
+  gap: 5px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.signup-header img{
+  width: 60px;
+  display: block;
+}
+.signup-header h4{
+  color:  rgb(180, 178, 178);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.form-field{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-field input{
+  padding: 20px 0;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(4, 10, 10);
+  color: rgb(180, 178, 178);
+  font-size: 20px;
+  width: 100%;
+}
+.input-eye-container span img{
+  top: 28px;
+}
+}
+@media screen and (min-width:1024px) {
+
+.robot-image-container{
+  width: 400px;
+  padding-top: 0px;
+}
+.robot-image-container img{
+  width: 100%;
+}
+
+.signup-header h4{
+  color:  rgb(180, 178, 178);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.form-field{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-field input{
+  padding: 25px 0;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(4, 10, 10);
+  color: rgb(180, 178, 178);
+  font-size: 20px;
+  width: 100%;
+}
+.form-field .email-prompt{
+  background-image: url('../assets/gmail-icon.png');
+  background-size: 17px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+.form-field .password-prompt{
+  background-image: url('../assets/password-icon.png');
+  background-size: 17px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+.input-eye-container span img{
+  position: absolute;
+  right: 20px;
+  top: 27px;
+  width: 20px;
+}
+.form-field .google{
+  background-color: rgb(9, 19, 19);
+  color: rgb(151, 151, 151);
+  background-image: url('../assets/google-icon.png');
+  background-size: 30px;
+  background-position: 80px;
+  background-repeat: no-repeat;
+  padding: 15px 10px;
+}
+
+}

@@ -1,0 +1,16 @@
+.lazy-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: 1s ease-in-out;
+}
+.lazy-container img{
+  width: 200px;
+}
+

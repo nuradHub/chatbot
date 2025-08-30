@@ -1,0 +1,114 @@
+.container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-color: rgb(17, 17, 17);
+ color: white;
+ height: 100dvh;
+ overflow: auto;
+}
+.nurad-chat-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 20px;
+}
+.nurad-chat-icon img{
+  width: 35px;
+}
+.chatbot-contents{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.chatbot-image img{
+  width: 310px;
+  height: 450px;
+}
+.chatbot-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.chatbot-details h3{
+  font-size: 35px;
+  text-align: center;
+}
+.chatbot-details .d1{
+  font-size: 35px;
+  text-align: center;
+  animation: opacity 1s linear;
+}
+.chatbot-details .d2{
+  font-size: 35px;
+  text-align: center;
+  animation: opacity 2s linear;
+}
+.chatbot-details .d3{
+  font-size: 35px;
+  text-align: center;
+  animation: opacity 3s linear;
+}
+.chatbot-details .d4{
+  font-size: 35px;
+  text-align: center;
+  animation: opacity 4s linear;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.chatbot-details p{
+  text-align: center;
+  font-size: 17px;
+  width: 250px;
+  font-weight: bold;
+  color: rgb(126, 126, 126);
+}
+
+.get-started-button{
+  width: 270px;
+  padding: 13px 17px;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(2, 2, 77);
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading{
+  width: 40px;
+}
+.existing-account{
+  display: flex;
+  align-items: center;
+}
+.existing-account p{
+  font-size: 10px;
+  font-weight: bold;
+  color: rgb(126, 126, 126);
+  padding-bottom: 20px;
+}
+.existing-account span{
+  color: rgb(6, 6, 160);
+  font-weight: bold;
+  cursor: pointer;
+}
